@@ -1,7 +1,7 @@
 ch = input()
-if ch >= 'A' and ch <= 'Z':
+if 'A' <= ch <= 'Z':
     print("Upper case alphabet")
-elif(ch>='a' and ch<='z'):
+elif 'a' <= ch <= 'z':
     print("lower case ")
 elif(ch>='0' and ch<='9'):
     print("digit")
