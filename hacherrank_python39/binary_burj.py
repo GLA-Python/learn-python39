@@ -14,12 +14,13 @@ binary burj
 '''
 
 num = int(input())
-ln = len(bin(num)) - 2
+w = len(bin(num)[2:])
 for i in range(num+1):
-    print(f'{{0:>{ln}}}'.format(bin(i)[2:]))
+    print(f'{{0:>{w}}}'.format(bin(i)[2:]))
     # x = bin(i)[2:]
-    #
-    # print(' '*(ln - len(x))+x)
+    # print(' '*(w-len(x))+x)
+
+
 
 
 
