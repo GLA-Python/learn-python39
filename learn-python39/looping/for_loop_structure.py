@@ -1,17 +1,24 @@
 # loop
-# iterting or iteration over the sequence
+
 # 1. for loop
 # 2. while loop
 
+# 1. for loop
+# iterting or iteration over the sequence
 '''
 for index in sequential_entity:
     # for body
 '''
-x = [1, 3, 4]
-for i in x:
-    print(i)
-    x[1] = 100
-print(x)
+
+s = 0
+for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+    s = s + i
+    break
+else:
+    print('loop completed')
+print(f'natural sum is {s}')
+
+
 
 
 
