@@ -53,27 +53,75 @@ st = 'hello python'
 re = st.count('hello')
 print(re)
 
-# encode : encode the string with given base
 
+# encode : encode the string with given base
 st = 'hello 😒 world 🔯😌'
-re = st.encode(encoding='utf')
-print(re)
+re = st.encode(encoding='utf', errors='ignore')
+print(re)  # b'hello \xf0\x9f\x98\x92 world \xf0\x9f\x94\xaf\xf0\x9f\x98\x8c'
+
+# decode : decode the encoded string
+re2 = re.decode('utf')
+print(re2)  # hello 😒 world 🔯😌
 
 
 
 # endswith
+st = 'Amir khan is Python Faculty and Ravi kumar is faculty'
+re = st[:9].endswith('an')
+print(re)
+
+# find return index of searched item, return -1 if item not found
+st = 'Amir khan is Python Faculty and Ravi kumar is faculty'
+re = st.find('m')
+print(re)  # 1
+
+# index : return the index of searched item and generate errors if item not found
+st = 'Amir khan is Python Faculty and Ravi kumar is faculty'
+re = st.index('khan')
+print(re)  # 5
+
+# isalpha()
+a = 'hello😒'
+re = a.isalpha()
+print(re)
+
+
+
+# join
+st = 'hello python programming'
+re = st.split('o')
+print(re)
+re2 = 'o'.join(re)
+print(re2)
+
+
+# strip : trim the string with whitespace
+# rstrip
+# lstrip
+st = '    hello world  '
+re = st.strip()
+print(f'Before Strip {st} and length {len(st)}')
+print(f'After Strip {re} and length {len(re)}')
+
+
+
+name = input().strip().lower()
+if name == 'nikhil':
+    print('Right Person')
+else:
+    print('Wrong Person')
+
+
+# translate
+st = 'hello 12 ka 4'
+mk = str.maketrans('1234', 'ABCT')
+re = st.translate(mk)
+print(re)
+
+# replace
 st = 'hello world'
-re = st[:5].endswith('o')
-print(re, type(re))  # output True <class 'bool'>
-
-# find return index of searched item return -1 if item not found
-st = 'hello world'
-re = st.find('world')
-print(re, type(re))  # output True <class 'bool'>
-
-
-
-
+re = st.replace('o', 'a')
+print(re)
 
 
 
