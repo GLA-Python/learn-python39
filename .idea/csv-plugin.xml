@@ -59,6 +59,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\learn-python39\selection_flowControl\if-else-structure.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\learn-python39\string_basics\string_examples_methods.py">
           <value>
             <Attribute>

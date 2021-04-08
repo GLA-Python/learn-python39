@@ -117,7 +117,7 @@ st = 'hello 12 ka 4'
 mk = str.maketrans('1234', 'ABCT')
 re = st.translate(mk)
 print(re)
-
+3
 # replace
 st = 'hello world'
 re = st.replace('o', 'a')
@@ -188,8 +188,14 @@ k = hs[5:1:-1]  # range [5, 4, 3, 2]
 print(k)  # output  oll
 
 
+a = 'hello221'
+re = a.isalpha()
+print(re)
 
 
 
-
-
+# membership operators
+# in, not in
+k = 'hello world'
+re = 'h' not in k
+print(re)
