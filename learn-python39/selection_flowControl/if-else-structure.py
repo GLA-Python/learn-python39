@@ -28,6 +28,7 @@ if uniq == '1234':
 
 # ternary feature in Python if else
 x = True
-a = 10 if x == True else 20
-print(f'Value of a {a} at condition x {x}')
+a = 10 if x else 20
+print(f'Value of a {a} at condition {x}')
+
 
