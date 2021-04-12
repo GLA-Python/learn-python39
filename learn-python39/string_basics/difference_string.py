@@ -21,3 +21,17 @@ print(f'string after filter {st3}')
 # st1 = 'hello python'
 # st2 = 'hi cython'
 # print(set(st2) - set(st1))
+
+
+
+
+
+import re
+
+m = re.finditer('[abc]', 'dtg$b@uagd')
+for i in m:
+    print(i.start(), i.group())
+
+
+my_set = {'abcd', 11, 1.1, "11", (1,2)}
+print(my_set)

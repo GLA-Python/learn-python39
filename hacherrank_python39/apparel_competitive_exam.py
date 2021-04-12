@@ -23,7 +23,7 @@ class Store:
                 st2 = True
                 if num < demp[size]:
                     st3 = True
-                    demp[size] = num
+                    demp[size] = demp[size] - num
                     if st1 == True and st2 == True and st3 == True:
                         print("Size Available")
                         for k, v in demp.items():

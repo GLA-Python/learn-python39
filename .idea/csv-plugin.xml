@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\hacherrank_python39\apparel_competitive_exam.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\hacherrank_python39\binary_burj.py">
           <value>
             <Attribute>
@@ -81,6 +88,13 @@
           </value>
         </entry>
         <entry key="\learn-python39\selection_flowControl\water_tank_problem.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\learn-python39\string_basics\dictionary_order_lexicographicalString.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
