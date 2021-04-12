@@ -122,6 +122,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\learn-python39\string_basics\split_string_with_count.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\learn-python39\string_basics\string_examples_methods.py">
           <value>
             <Attribute>
