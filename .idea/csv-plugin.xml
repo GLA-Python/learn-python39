@@ -108,6 +108,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\learn-python39\string_basics\frequency_of_char.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\learn-python39\string_basics\remove_char_except_alpha.py">
           <value>
             <Attribute>
