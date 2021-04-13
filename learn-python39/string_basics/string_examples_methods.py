@@ -199,3 +199,17 @@ print(re)
 k = 'hello world'
 re = 'h' not in k
 print(re)
+
+
+# string encode
+k = 'hello world ✰'
+st = k.encode('utf-8')
+print(st)
+
+k = b'hello world \xe2\x9c\xb0'
+k.decode('utf')
+
+
+k = b'\xf0\x9f\x98\x95'
+print(k.decode('utf'))
+
