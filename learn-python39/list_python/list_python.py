@@ -71,7 +71,9 @@ lst.append(100)
 print(lst)
 
 
-# methods in a list class
+
+
+
 # 1. append(): add the element or item at the end of the list
 lst = [2, 43, 'Hello', [3, 5]]  # len 4
 lst.append('Python')  # len 5
