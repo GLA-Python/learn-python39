@@ -98,3 +98,24 @@ lst2 = lst1.copy()
 lst1[0] = 100
 print('list1', lst1)
 print('list2', lst2)
+
+
+# deletion statement
+a = 12
+print(a)
+del a
+print(a)
+
+# item deletion with string
+st = 'hello'
+del st  #  object deletion allowed
+del st[0]  # TypeError str' object doesn't support item deletion
+print(st)
+
+# list support item deletion and as well as object class deletion
+a = 10
+lst = [a, 10, 'hi']
+del lst[0]  # item deletion
+print(lst)
+
+
