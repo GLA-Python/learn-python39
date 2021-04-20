@@ -51,6 +51,13 @@ lst = [1, 3, 'ravi', 100]
 lst.remove('ravi')
 print(lst)  # [1, 3, 100]
 
+
+# del statement (del not a method of list)
+a = [2, 4, 54, 43]
+del a[0]  # list support item deletion
+print(a)
+
+
 # example 2: remove multiple items
 lst = list(range(10))  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 for i  in [2, 4, 5]:
