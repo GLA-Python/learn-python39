@@ -9,6 +9,12 @@ lst = []  # list format
 lst = list()  # list class constructor
 print(lst)
 
+k = 'hello'
+print(ord(k[0]))
+lst = list(k)
+print(lst)
+
+
 
 # initialize list with some items
 lst = [12, 32.8, 22+3j, 'hello', [3, 43]]

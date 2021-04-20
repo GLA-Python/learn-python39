@@ -52,6 +52,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\learn-python39\list_python\list_2D.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\learn-python39\list_python\list_comprehension.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\learn-python39\looping\armstrong_number.py">
           <value>
             <Attribute>
