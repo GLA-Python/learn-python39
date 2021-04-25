@@ -154,7 +154,15 @@ else:
 
 
 
-
+'''
+string: 30%
+list: 20%
+tuple: 30%
+for loop/ while loop: 
+eval()/ type()/ id()/ max()/min()/ round()/ input()/print()/ len(): 10%
+is: identity operator
+in: membership operator
+'''
 
 
 
