@@ -11,14 +11,21 @@ re = st.capitalize()
 print(re, type(re))  # output Hello world <class str>
 
 # title()
+# example1
 st = 'hello 1g world'
 re = st.title()
 print(re, type(re))  # Output Hello 1G World
 
+# example2
+st = 'python programming class'
+re = st.title()
+print(re, type(re))  # Python Programming Class class<'str'>
+
+
 # upper()  work on ascii string
 st = 'hello world 123@'
 re = st.upper()
-print(re)  # Output HELLO WORLD 123@
+print(re, type(re))  # Output HELLO WORLD 123@  class<'str'>
 
 # lower() work on ascii string
 st = 'Hello World 123@'
@@ -26,32 +33,33 @@ re = st.lower()
 print(re)  # Output hello world 123@
 
 # casefold() convert all alphabet into lower case (work on unicode string)
-st = 'Hello World'
+st = 'Hello World 😛'
 re = st.casefold()
-print(re)  # Output hello world
+print(re)  # Output hello world 😛
 
 
-# split()  split the string with given pattern and return the list of items
+# split()  split the string with given pattern and return the list of substring
 # example 1
 st = 'hello world programming'
 re = st.split(' ')
 print(re, type(re))  # ['hello', 'world', 'programming'] <class 'list'>
 
+# 33 54  65  5455
 # example 2
 st = 'hello    pyth\ton progra\nmming'
 re = st.split()  # default split pattern 'whitespace'
 print(re)  # ['hello', 'pyth', 'on', 'progra', 'mming']
 
 
-# centre
+# centre: fix the width of string with fill char
 st = 'hello python'
-re = st.center(100, '*')
+re = st.center(16, '*')
 print(re)
 
-# count count the substring in a string
+# count(): count the substring in a string
 st = 'hello python'
-re = st.count('hello')
-print(re)
+re = st.count('o')
+print(re, type(re))
 
 
 # encode : encode the string with given base
@@ -77,7 +85,7 @@ print(re)  # 1
 
 # index : return the index of searched item and generate errors if item not found
 st = 'Amir khan is Python Faculty and Ravi kumar is faculty'
-re = st.index('khan')
+re = st.rindex('m')
 print(re)  # 5
 
 # isalpha()
@@ -137,7 +145,6 @@ print('sum of element', sum(ls1))
 
 
 # use of eval
-
 k = 'print("hello")'
 eval(k)
 print(k, type(k))
