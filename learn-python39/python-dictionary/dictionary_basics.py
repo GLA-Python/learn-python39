@@ -21,7 +21,7 @@ print(info, type(info), id(info))
 # read
 print('Name', info[0])
 # write
-info[1] = 100
+info[1] = 100  # item assignment
 info.append('Ashok')
 print(info, type(info), id(info))
 
@@ -45,29 +45,37 @@ print(info, id(info))
 
 
 # dictionary : unordered collection of items and each item is the pair of key and value
-info = {'name': 'yash', 'roll number':34, 'section':'C', 'address':'GLA University', 'name':'vishnu'}
+# info = ['vishnu', 34, 'C', 'GLA University', 5.76]
+# print('name', info[4])
 
-# read
-print(info['section'])
-# print(info['father'])
 
-data = info['name']
-print(data)
+info = {'name': 'vishnu', 'roll number':34, 'section':'C', 'address':'GLA University', 'cpi':5.76}
 
+# print('name', info['name'])
+# print('cpi', info['cpi'])
+
+# read operation
+print(info['roll number'])
+
+# write operation
+info['roll number'] = 100
+info['father name'] = 'Rajiv'
+
+print(info)
 
 # initialization of dictionary
 # empty collection
 # list
 lst = []  # list format
-lst = list()  # list class constructor
+lst = list()  # list class constructor  (Python built-in)
 
 # tuple
 tpl = ()
 tpl = tuple()  # tuple class constructor
 
-# dict
+# dict empty
 dct = {}
-dct = dict()  # dict class constructor
+dct = dict()  # dict class constructor (python built-in)
 
 # set
 st = set()   # set class constructor
@@ -79,13 +87,14 @@ st = set()   # set class constructor
 # print(type(a))
 
 # initialize the dictionary with items
-# lst = [['alto', 'nano'], 70, 'white', 1990]
-dct = {'car':['alto', 'nano'], 'speed':70, 'color':'white', 'model':1990}
+student_info = {'name':'Vishnu', 'section':['C', 'E'], 'roll_number': 36, 'section':'R', 2:343}
+print(student_info, type(student_info))
 
-# accessing the value
-# cars = lst[0]
-cars = dct['car']
 
+# accessing the element
+# key search
+print('name', student_info['name'])
+print(student_info)
 
 
 
