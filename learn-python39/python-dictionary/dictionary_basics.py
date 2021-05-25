@@ -97,7 +97,59 @@ print('name', student_info['name'])
 print(student_info)
 
 
+k = ['Ravi', [2, 4, 56], 43]
+k = {'name':'Ravi', 'marks':[2, 4, 54, 65], (2, 4): 43}
+print(k, type(k))
+
+k = {'car1':'alto', 'car1':'xyz'}
+print(k)
+
+
+
+# methods in python dictionary
+
+# 1. clear(): clear all the items
+info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
+print(info, id(info))
+info.clear()  # clear all items or empty dictionary
+print(info, id(info))
+
+# 2. pop(): remove and return the value item with key
+info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
+d = info.pop('address')
+print(d, type(d))
+print(info)
+
+
+# lst = [2, 54, 56]
+# k = lst.pop(1)
+# print(lst)
+
+
+# 3. popitem(): remove and return the last item(key and value pair)
+
+info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
+d = info.popitem()  # pair of key and value in tuple format
+print(d, type(d))
+print(info)
+
+
+# item deletion:= use del keyword
+info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
+del info['name']
+print(info)
+
+
+# what is the deletion statement?
+# we use del keyword to delete the object
+lst = [2, 4, 45, (34, 5)]
+del lst[-1]  # example in a list
+print(lst)
 
 
 
 
+
+
+
+# d = [('name', 'Ravi'), ('section', 'C'),  ]
