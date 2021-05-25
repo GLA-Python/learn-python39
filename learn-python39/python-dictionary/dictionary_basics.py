@@ -127,7 +127,6 @@ print(info)
 
 
 # 3. popitem(): remove and return the last item(key and value pair)
-
 info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
 d = info.popitem()  # pair of key and value in tuple format
 print(d, type(d))
@@ -147,9 +146,60 @@ del lst[-1]  # example in a list
 print(lst)
 
 
+# update():  update() just update the key with updated dictionary
+info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
+update_info = {'name': 'Vishal', 'father':'Ram Mishra', 'CPI': 6.65}
+print(info)
+info.update(update_info)
+print(info)
+
+
+# fromkeys(): create a dictionary using keys in a list
+lst = ['name', 'student_m', 'cpi', 'address']
+info = {}.fromkeys(lst, 'NA')
+print(info)
+
+
+
+# value() and keys()
+info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
+
+k = info.keys()
+v = info.values()
+
+print(k, type(k))  # dict_keys(['name', 'section', 'roll_number', 'address']) <class 'dict_keys'>
+print(v, type(v))  # dict_values(['Vishnu', 'C', 36, 'GLA']) <class 'dict_values'>
+
+
+# get(): return the value with keys
+info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
+
+v = info['name']
+
+v = info.get('name', 'NA')
+print(v)
+
+
+# general dictionary question
+dct = {(3, 5):50, 30: 65}
+
+# v = dct[3, 5]
+
+v = dct.get(3, 5)
+print(v, type(v))
+
+
+print(dct)
 
 
 
 
 
-# d = [('name', 'Ravi'), ('section', 'C'),  ]
+
+
+
+
+
+
+
+
