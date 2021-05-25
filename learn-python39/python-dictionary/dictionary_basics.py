@@ -187,8 +187,6 @@ dct = {(3, 5):50, 30: 65}
 
 v = dct.get(3, 5)
 print(v, type(v))
-
-
 print(dct)
 
 
