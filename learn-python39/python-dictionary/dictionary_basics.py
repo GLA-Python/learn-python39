@@ -105,8 +105,77 @@ k = {'car1':'alto', 'car1':'xyz'}
 print(k)
 
 
+# methods in python dictionary (operation with Python)
 
-# methods in python dictionary
+# 1. clear(): remove all the item from dictionary object
+info = {'name': 'Ravi', 'section': 'N', 'subject': 'Python Programming', 'CPI': 56}
+print(info, id(info))
+info.clear()
+print(info, id(info))
+
+# 2. pop(): remove and return the value using key
+info = {'name': 'Ravi', 'section': 'N', 'subject': 'Python Programming', 'CPI': 56}
+print(info)
+k = info.pop('name')
+print('pop value', k)
+print(info)
+
+# # pop() in list
+# lst = [3, 54, 65]
+# v = lst.pop(1)
+# print(v)
+# print(lst)
+
+# 3. popitem(): remove and return the last occurence item(key and value pair) from dictionary
+info = {'name': 'Ravi', 'section': 'N', 'subject': 'Python Programming', 'CPI': 56}
+v = info.popitem()
+print(v)
+print(info)
+
+# item deletion
+info = {'name': 'Ravi', 'section': 'N', 'subject': 'Python Programming', 'CPI': 56}
+del info['section']
+print(info)
+
+# deletion statement
+# what is deletion statement?
+# in deletion statement we use del keyword and use to delete the object
+a = (3, 5, 5, 64, 5)
+del a
+print(a)
+
+# 4. update(): update the dictionary
+info = {'name': 'Ravi', 'section': 'N', 'subject': 'Python Programming', 'CPI': 5.6}
+up_info = {'section': 'P', 'father': 'Ramesh', 'CPI': 8.4 }
+info.update(up_info)
+print(info)
+
+# 5. setdefault(): set default value of key and create
+info = {'name': 'Ravi', 'section': 'N', 'subject': 'Python Programming', 'CPI': 5.6}
+info.setdefault('marks')
+info.setdefault('CPI')
+print(info)
+
+# 6. fromkeys(): create the dictionary with keys present in a list
+k = ['name', 'father', 'mobile', 'address', 'cpi']
+
+dct = dict.fromkeys(k, 'abhi data nhi aaya')
+
+print(dct)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 1. clear(): clear all the items
 info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
