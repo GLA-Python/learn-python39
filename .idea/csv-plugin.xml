@@ -101,6 +101,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\learn-python39\looping\lcm_two_number.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\learn-python39\looping\perfect_number.py">
           <value>
             <Attribute>
@@ -140,6 +147,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\learn-python39\set_Python\set_methods.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
