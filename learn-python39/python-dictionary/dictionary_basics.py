@@ -177,7 +177,7 @@ print(dct)
 
 
 
-# 1. clear(): clear all the items
+# 1. clear(): clear all the items from the dictionary object
 info = {'name':'Vishnu', 'section':'C', 'roll_number': 36, 'address':'GLA'}
 print(info, id(info))
 info.clear()  # clear all items or empty dictionary
@@ -213,6 +213,152 @@ print(info)
 lst = [2, 4, 45, (34, 5)]
 del lst[-1]  # example in a list
 print(lst)
+
+
+# 4. update(): update the dictionary with new items and values
+
+info = {'car': 'nano', 'speed': 50, 'model': 2007}
+v = {'speed': 70, 'color': 'white'}
+info.update(v)
+print(info)
+
+
+# 5. setdefault(): set default value of key and add
+info = {'car': 'nano', 'speed': 50}
+info.setdefault('color', 'white')
+info.setdefault('speed', 0)
+info.setdefault('model')
+print(info)  # {'car': 'nano', 'speed': 50, 'color': 'white', 'model': None}
+
+
+# 6. fromkeys(): create new dictionary with keys in a sequential data(list)
+# d = {'32': 54}
+rc = ['name', 'father', 'roll_num', 'subject']
+dct = {}.fromkeys(rc, 'NA')
+dct.update({'name': 'Raj'})
+print(dct)
+
+
+# copy(): return the copy of dictionary
+info = {'car': 'nano', 'speed': 50, 'color': 'white'}
+var = info.copy()
+var['color'] = 'black'
+var['model'] = 2020
+var.clear()
+print(info)
+print(id(info), id(var))
+
+
+# get(): return the value using key search
+
+info = {'car': 'nano', 'speed': 50, 'color': 'white'}
+# direct key search
+# v = info['car']  # return the value of the key if key is present and generate the error or exception of key is not present
+
+# using get method
+v = info.get('engine', 'not available')
+print(v)
+
+
+# dict
+dct = {(2, 4): 10, (3, 6): 23}
+
+# v = dct[2, 4]
+
+v = dct.get(3, 6)
+# t = 3, 5
+print(v)
+
+
+# items(): return the list of items in the form of tuple
+info = {'car': 'nano', 'speed': 50, 'color': 'white'}
+v = list(info.items())
+print(v)
+
+
+# keys(): return the list of keys
+
+info = {'car': 'nano', 'speed': 50, 'color': 'white'}
+v = list(info.keys())
+print(v, type(v))
+
+# values(): return the list of values
+
+info = {'car': 'nano', 'speed': 50, 'color': 'white'}
+v = list(info.values())
+print(v, type(v))
+
+
+
+k = [(10, 0), (2, 4), (0, 3)]
+
+# k = [2, 0, 32, 9]
+k.sort()
+print(k)  # [0, 2, 9, 32]
+
+
+
+
+# copy(): return the copy of dictionary
+
+info1 = {'car': 'nano', 'speed': 50}
+info2 = info1.copy()
+
+info2['car'] = 'alto'
+
+print(info1)
+
+
+
+
+# get(): return the value using key
+
+info = {'car': 'nano', 'speed': 50, 'model': 2010}
+# direct key search
+# v = info['Car']  # return the value of key if key is present and generate the exception(error) KeyError
+                # if key is not present in the dictionary
+# using get() method
+v = info.get('speed', 'ye key hmare pass nhi h')
+print(v)
+
+
+# dict
+d = {(3, 4): 2, (4, 7): 5, 3: 100}
+# v = d[(3, 4)]
+# v = d[3, 4]  # output 2
+# v = d.get((3, 4))  # output 2
+v = d.get(3, 4)  # output 4
+print(v)
+
+
+# how to read the dictionary from user
+# 5
+# sub1 23
+# sub2 45
+# sub3 34
+# sub4 50
+
+
+n = int(input())
+dct = {}
+for i in range(n):
+    # v =  input() # 'sub1 23'
+    v = input().split()  # ['sub1', '23']
+    dct[v[0]] = eval(v[1])
+
+print(dct)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # update():  update() just update the key with updated dictionary
@@ -258,6 +404,46 @@ v = dct.get(3, 5)
 print(v, type(v))
 print(dct)
 
+
+# update(): update the dictionary with other (merge two dictionary)
+
+dct = {'car':'nano', 'speed':10}
+v = {'color': 'white', 'speed': 60}
+dct.update(v)
+print(dct)
+print(list(dct.items()))
+
+
+
+ls = [2, 4]
+k = ls.copy()
+k[1] = 100
+print(ls)
+
+
+for i in ls:
+    print(i)
+    ls[1] = 10
+2
+10
+# print(ls)
+
+
+
+# duplicate values
+info = {'car1': 'alto', 'car2':'alto'}
+v = list(info.values())
+for i in info.copy():
+    if v.count(info[i]) > 1:
+        del info[i]
+print(info)
+
+def khudka(k):
+    return k[1]
+
+lst = [(1, 3), (10, 0), (2, 2)]
+lst.sort(key=khudka)
+print(lst)
 
 
 
