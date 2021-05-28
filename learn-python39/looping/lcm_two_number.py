@@ -14,3 +14,30 @@ while 1:
     lcm += 1
 print(f'LCM of two number is {lcm}')
 
+
+
+# iteration vs recursion
+
+for i in [2, 4, 54, 65, 6]:
+    print(i)
+
+
+""""
+Calculator
+Enter the number first number: 
+Enter the second number: 
+
+selection the options choice
+1> Add
+2> Sub
+3> Div
+4> Mul
+
+enter the choice 1/2/3/4: 
+
+enter Y/N Y for continue and N for exit?
+
+"""
+
+st = '>>>'
+
