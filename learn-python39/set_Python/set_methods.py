@@ -20,5 +20,5 @@ v = a if a > 10 else b
 # if a > 10:
 #     v = a
 # else:
-#     v = b
-print(v)
+#     v = b/.ilkji9
+print(v)print('not sorted');;;
