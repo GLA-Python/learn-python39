@@ -198,11 +198,14 @@ print(V)
 
 
 # how to handle the default value arguments in Python function
-def sum_num(a=0, b=7, c=10):  # a = 3, b = 5, c = 7
+def sum_num( a=0, b=0, c=3):  # a = 3, b = 5, c = 7
     return a + b + c
 
-v = sum_num(5, 0, 0)
+v = sum_num(3, 5, 6)
 print(v)
+
+
+
 
 
 # keyword arguments (optional)
@@ -219,6 +222,101 @@ def student_info( **var):
 
 k = student_info( subject='math', name='ravi', cpi=8.5)
 print(k)
+
+
+
+# variable scope
+'''
+1. local
+2. global
+3. nonlocal 
+'''
+def fun():
+    a = 33  # local variable
+
+a = 12  # global variable
+fun()
+print(a)
+# output :=> 12
+
+
+def info():
+    def second():
+        var = 12  # local variable
+    def third():
+        var = 43  # local variable
+    def fourth():
+        var = 0   # local variable
+    var = 100  # local varibale
+    second()
+    print(var)
+    third()
+    print(var)
+    fourth()
+    print(var)
+
+var = 10  # global variable
+info()
+print(var)
+
+
+
+
+# read global data
+def xml():
+    # var = 10
+    print(var)  # referencing with global
+
+var = 100  # global
+xml()  # function calling
+print(var)  # read var
+
+# output
+100
+100
+
+# write in global with local
+def xml():
+    global var
+    print(var)  # local variable var
+
+
+def xml2():
+    print(var)
+
+xml()
+xml2()
+print(var)
+
+
+
+#
+def info():
+    def second():
+        var = 12  # local variable
+    def third():
+        nonlocal var
+        var = 43  # local variable
+    def fourth():
+        global var
+        var = 0   # local variable
+     # local varibale
+    var = 100 # nonlocal environment
+    second()
+    print(var)
+    third()
+    print(var)
+    fourth()
+    print(var)
+
+var = 22  # global variable
+info()
+print(var)
+
+
+
+
+
 
 
 # scope of variable (important**)
@@ -267,14 +365,14 @@ def fun():
 
 k = 100
 fun()
-
-
-
 # example based on scope
-def anytwo(var):  # var = var
+
+
+def any_two(var):  # var = var
     def hlt():
         global var
         print(var)
 
+
 var = 33
-anytwo(var)
+any_two(var)
