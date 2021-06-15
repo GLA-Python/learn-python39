@@ -11,31 +11,31 @@ print(): built-in function for std o/p
 '''
 
 # example 1: sum of two numbers and display the output
-# import time
-# num1 = eval(input('enter the first number '))  # standard input
-# num2 = eval(input('enter the second number '))
-#
-# out = num1 + num2
-# x = time.asctime()
-# print(f'sum of {num1} and {num2} is {out} at {x}')  # standard output
+import time
+num1 = eval(input('enter the first number '))  # standard input
+num2 = eval(input('enter the second number '))
+
+out = num1 + num2
+x = time.asctime()
+print(f'sum of {num1} and {num2} is {out} at {x}')  # standard output
 
 # write the first data into a file
 '''
 open(filename, mode): built-in function for file handling 
 
 '''
-# f = open('C:/Users/Amirkhan/Desktop/addition.txt', 'w')
-#
-# f.write(f'sum of {num1} and {num2} is {out} at {x}')
-#
-# f.close()
-# print('\\')
+f = open('C:/Users/Amirkhan/Desktop/addition.txt', 'w')
+
+f.write(f'sum of {num1} and {num2} is {out} at {x}')
+
+f.close()
+print('\\')
 
 # file management
 
-# f = open('table.txt', 'w')
-# f.write('hello file, this is Python Programming')
-# f.close()
+f = open('table.txt', 'w')
+f.write('hello file, this is Python Programming')
+f.close()
 
 
 
@@ -46,15 +46,15 @@ open(filename, mode): built-in function for file handling
 .
 .
 '''
-# f = open('table.txt', 'w')  # open the file in write mode
-# N = 10
-# for i in range(1, N+1):
-#     for j in range(1, N+1):
-#         print(f'{i*j}\t', end='')
-#         f.write(str(i*j) + '\t')
-#     print()
-#     f.write('\n')
-# f.close()
+f = open('table.txt', 'w')  # open the file in write mode
+N = 10
+for i in range(1, N+1):
+    for j in range(1, N+1):
+        print(f'{i*j}\t', end='')
+        f.write(str(i*j) + '\t')
+    print()
+    f.write('\n')
+f.close()
 
 
 # opening the file
@@ -70,46 +70,46 @@ Mode:
 
 # reading the file
 # read(): it will read the entire data of the file from current location
-# f = open('addition.txt', 'r')
-# # f.write()  # cant use
-# data = f.read()  # it will read the entire data of the file
-# print(data)
-# f.close()
+f = open('addition.txt', 'r')
+# f.write()  # cant use
+data = f.read()  # it will read the entire data of the file
+print(data)
+f.close()
 
 
 # read with argv
-# f = open('addition.txt', 'r')
-# # data = f.read()
-# data1 = f.read(10)  # it will the 10 chars only from current
-# # print(data1)
-# # print(f.tell())
-# data2 = f.read(5)
-# # print(data2)
+f = open('addition.txt', 'r')
 # data = f.read()
-# print(data)
+data1 = f.read(10)  # it will the 10 chars only from current
+# print(data1)
 # print(f.tell())
-# f.close()
+data2 = f.read(5)
+# print(data2)
+data = f.read()
+print(data)
+print(f.tell())
+f.close()
 
 # readline(): read the next single line from current
-# f = open('addition.txt')
-# data1 = f.readline()
-# print(len(data1))
-# f.close()
+f = open('addition.txt')
+data1 = f.readline()
+print(len(data1))
+f.close()
 
 # readline() with argv
-# f = open('addition.txt')
-# data1 = f.readline(49)  # chars limits in a single line 10
-# data2 = f.readline()
-# print(data1)
-# print(data2 )
-# f.close()
+f = open('addition.txt')
+data1 = f.readline(49)  # chars limits in a single line 10
+data2 = f.readline()
+print(data1)
+print(data2 )
+f.close()
 
 
 # readlines(): list of lines
-# f = open('addition.txt', 'rb')
-# data = f.readlines()
-# print(data)
-# f.close()
+f = open('addition.txt', 'rb')
+data = f.readlines()
+print(data)
+f.close()
 # f = open('filename', 'mode')
 '''
 1. read(): read all chars in a file  
@@ -121,26 +121,27 @@ Mode:
 # iterator behaviour of file object:
 # with next()
 # # with loop()
-# f = open('addition.txt')
-# # using next() built-in function
-# op = 1
-# while op:
-#     k = next(f, 0)
-#     if k != 0:
-#         print(k)
-#     else:
-#         break
-# f.close()
+
+f = open('addition.txt')
+# using next() built-in function
+
+while 1:
+    k = next(f, 0)
+    if k != 0:
+        print(k)
+    else:
+        break
+f.close()
 
 
 # # using for loop
-# f = open('addition.txt')
-# # using for loop function
-# for line in f: # line = 'hello...'
-#     k = next(f)
-#     print(k)
-#
-# f.close()
+f = open('addition.txt')
+# using for loop function
+for line in f: # line = 'hello...'
+    k = next(f)
+    print(k)
+
+f.close()
 
 
 
@@ -149,16 +150,16 @@ Mode:
 # 2. writelines()
 "'w': open the file in write mode. create the file if file not exist"
 #
-# f = open('sample.txt', 'w')
-# if not f.closed:
-#     print('file succesfully opened')
-#     f.write('this is a \nsample text for sample file')
-#     f.write('\nusing python programming')
-#     f.close()
-#     if f.closed:
-#         print('file successfuly saved')
-# else:
-#     print('file not opened')
+f = open('sample.txt', 'w')
+if not f.closed:
+    print('file succesfully opened')
+    f.write('this is a \nsample text for sample file')
+    f.write('\nusing python programming')
+    f.close()
+    if f.closed:
+        print('file successfully saved')
+else:
+    print('file not opened')
 
 
 
@@ -171,36 +172,6 @@ kh = ['first line\n', 'second line\n', 'third line\n']
 f.writelines(kh)
 
 f.close()
-
-
-
-
-
-
-# # write operation
-# f = open('addition.txt', 'w')
-# f.write('hello, how are you')  # current location 0
-# f.write('\nPython programming\n')
-# # f.writelines()
-# # f.close()
-#
-# lst = ('\nravi\n', 'suresh\n', 'deepak\n')
-#
-# # for i in lst:
-# #     f.write(i)
-#
-# f.write(str(lst))
-#
-# f.close()
-#
-# print()
-
-
-
-
-
-
-
 
 
 
@@ -257,31 +228,6 @@ f.close()
 # f.close()
 
 
-
-
-
-
-
-
-
-
-
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
 #
 #
 # # example sum of two number and print the output with comment
