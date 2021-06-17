@@ -110,7 +110,7 @@ f.write('\ndata in last')
 f.close()
 
 
-# a+, ab+ : write and read mode with add the data into a file in last
+# a+, ab+ : write and read mode with add the data into a file and display text
 f = open('addition.txt', 'a+')
 f.write('hello')
 f.seek(0, 0)
