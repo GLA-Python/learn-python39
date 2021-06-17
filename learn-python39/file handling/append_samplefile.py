@@ -14,5 +14,7 @@ add some extra data to the file
 # f.close()
 
 f = open('addition.txt', 'a')
-f.write('\nsecond line')
+
+f.write('\nthird line')
+
 f.close()
