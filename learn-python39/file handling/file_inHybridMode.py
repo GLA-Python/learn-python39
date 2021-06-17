@@ -119,7 +119,7 @@ print(data)
 f.close()
 
 
-# read n lines
+# read n lines from file
 n = 10
 f = open('sample.txt')
 for i in range(n):
