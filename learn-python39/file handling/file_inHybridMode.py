@@ -16,6 +16,37 @@ ab+ or a+b: in Binary mode
 
 """
 
+# W+ , Write and read permission[file always truncated]
+
+# f = open('sample_binary.txt', 'w+')
+# f.write('hello, How are you!')
+# f.seek(0)
+# data = f.read()
+# print(data)
+# f.write('priyanshi doubt')
+# f.close()
+
+
+# R+ Read and Write
+f = open('sample_binary.txt', 'r+')
+data = f.read()
+print(data)
+f.seek(0)
+f.write('New data Added')
+f.close()
+
+
+# read n lines
+f = open('filename')
+N = int(input('enter the number of line '))
+for i in range(N):
+    print(next(f))
+
+
+
+
+
+''''
 f = open('hybridfile.txt', 'wb+')
 f.write(b'this is my text in file')
 
@@ -125,3 +156,4 @@ f = open('sample.txt')
 for i in range(n):
     print(f.readline())
 f.close()
+'''
