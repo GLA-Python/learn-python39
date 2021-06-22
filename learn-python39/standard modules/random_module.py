@@ -2,6 +2,166 @@
 Random Module in Python: random variable generators
 Modules in Python: just a python file where function defines
 """
+
+import random
+
+lst = [2, 4, 55, 32, 3, 67, 23]
+
+v   = random.choice(lst)
+
+print(v)
+
+
+# choice(): return the random single value from sequential data
+
+import random
+names = ['raj', 'ravi', 'muskan', 'ayush']
+name = random.choice(names)
+print(name)
+
+
+# randrange(): return a interger number between given range
+
+import random
+num = random.randrange(1, 10, 5)  # 1, 6
+print(num)
+
+
+
+# guess the number
+import random
+num = random.randrange(1, 101)
+count = 0
+while 1:
+    n = int(input('guess the number '))
+    count += 1
+    if n < num:
+        print('smaller number ')
+    elif n > num:
+        print('number is greater ')
+    else:
+        print('You Win score/', count)
+        break
+
+
+
+# randint(): return a random number between a and b inclusive
+
+import random
+v = random.randint(1, 4)  # 1, 2, 3, 4
+print(v)
+
+
+# choices(): return multiple choice
+import random
+lst = ['ravi', 'yash', 'satrughan sinha', 'salman khan']
+ch = random.choices(lst, weights=(1, 1, 5, 2), k=3)
+print(ch)
+
+
+# sample()
+lst = ['ravi', 'yash', 'satrughan sinha', 'salman khan']
+ch = random.sample(lst, k=2)
+print(ch)
+
+
+
+# shuffle(): use to shuffle the list
+lst = ['ravi', 'yash', 'satrughan sinha', 'salman khan']
+random.shuffle(lst)
+print(lst)
+
+
+
+
+# random()
+
+import random
+
+v = random.random()
+
+print(v)
+
+
+
+# opt of 4 digit
+import random
+otp = str(random.random())[-4:]
+print(otp)
+
+
+
+# seed()
+import random
+rg = random.randrange(1, 10)  # 1, 2, 3, 4, 5, 6, 7,8, 9
+print(rg)
+
+
+
+
+'''
+3 8 8 3 7
+
+'''
+
+
+
+
+import random
+lst = ['ravi', 'saket', 'maryam', 'shaurabh']
+name = random.choice(lst)
+print(name)
+
+
+
+
+
+
+
+
+'''
+saket
+shaurabh
+shaurabh
+saket
+
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import random
 
 v2 = random.randrange(1, 101)
