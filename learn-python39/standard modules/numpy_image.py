@@ -92,8 +92,6 @@ print(mat2)
 
 
 
-
-
 # array as image
 
 import numpy as np
