@@ -61,7 +61,7 @@ print(ch)
 
 # sample()
 lst = ['ravi', 'yash', 'satrughan sinha', 'salman khan']
-ch = random.sample(lst, k=2)
+ch = random.sample(lst, 3)
 print(ch)
 
 
@@ -77,14 +77,12 @@ print(lst)
 # random()
 
 import random
-
 v = random.random()
-
 print(v)
 
 
 
-# opt of 4 digit
+# otp of 4 digit
 import random
 otp = str(random.random())[-4:]
 print(otp)
