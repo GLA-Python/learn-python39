@@ -3,44 +3,74 @@ use for mathematical function
 """
 
 
-v = math.sin(100)
+# import math as m
+
+from math import *
+
+num = 18/pi
+
+v = sqrt(num)
+fct = factorial(5)
+
+print(v, fct)
+
+v = pow(2, 4)
 print(v)
 
 
+
+
+
+
+
+
+
 # sqrt(): to calculate the square root of the given number
-import math
-k = math.sqrt(16)
+from math import sqrt
+k = sqrt(16)
 print(k)
 
 
 # ceil(): return the smallest integer equal or greater to the number
+import math
+k = 34.01
+v = math.ceil(k)
+print(v)
 
-num = 23.001
-k = math.ceil(num)
-print(k)
+
+# copysign
+x = -3
+y = 4
+v = math.copysign(y, x)
+print(v)
+
 
 
 
 # floor()
 
-num = 23.43
+num = 23.9202
 k = math.floor(num)
 print(k)
 
 
-# log()
 
-v = math.log(8, 2)
-print(v) # 3
+
+# log()
+import math
+v = math.log(19, 10)
+print(v)
 
 
 
 
 # byte size calculation
 k = 65536
-# logic
-bt = int(math.log(k, 256)) + 1
+bt = int(math.log(k, 256))+1
 print(bt)
+
+
+
 
 
 #
