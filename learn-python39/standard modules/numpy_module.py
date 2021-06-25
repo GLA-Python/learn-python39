@@ -31,6 +31,108 @@ condition for the good password
 # print(re)
 #
 
+
+# numpy
+import numpy
+lst = [8, 4, 6, 4]
+print('list', lst, lst[0], type(lst[0]))
+arr = numpy.array(lst)
+print('numpy ndarray', arr, arr[0], type(arr[0]))
+
+# 1. array(): function in numpy module. convert the sequence into the ndarray
+
+# 0 Dimensional Array
+import numpy as np
+arr = np.array(23)
+print(arr, type(arr), arr.ndim)
+
+# example 2: 1-D array
+import numpy as np
+arr = np.array([3, 4, 6, 23, 5])
+print(arr, type(arr), arr.ndim)
+
+# example 3: 1-D array(data type of the elements)
+import numpy as np
+arr = np.array([200, 130, 127, 23, 257, 255], dtype=numpy.int8)
+print(arr, type(arr), arr.ndim)
+
+# example 4: 1-D array
+import numpy as np
+arr = np.array([2, 4, 53.9, 'hello'], dtype='object')
+print(type(arr[-2]))
+
+
+# example 2-D Array(Matrix)
+import numpy as np
+arr = np.array([[2, 4, 4], [3, 7, 33]])
+print(arr)
+print(arr.shape)
+
+arr.shape = 3, 2
+print(arr)
+
+print(arr.ndim)
+
+
+
+
+# reshape()
+import numpy as np
+arr1 = np.array([[2, 4], [3, 3], [2, 10]])
+arr2 = arr1.reshape(2, 3)
+print('array1', arr1)
+print('array2', arr2)
+
+
+
+# arange(): create the array with given range
+import numpy as np
+arr = np.arange(1, 2, .05)
+print(arr, type(arr))
+
+
+
+# matrix operation
+# matrix multiplication
+import numpy as np
+mat1 = np.array([[2, 4, 5], [2, 4, 6]])
+mat2 = np.array([[4, 7], [1, 0], [3, 8]])
+
+if mat1.shape[1] == mat2.shape[0]:
+    print(np.dot(mat1, mat2))
+else:
+    print('Invalid operation')
+
+
+# elementary multiplication
+import numpy as np
+mat1 = np.array([[2, 4, 5], [2, 4, 6]])
+mat2 = np.array([[4, 7, 1],[ 0, 3, 8]])
+print(np.multiply(mat1, mat2))
+
+# print(mat1.__mul__(mat2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import numpy
 k = numpy.array(89)
 print(k, type(k), k.ndim)
@@ -48,11 +150,11 @@ import numpy as np
 arr = np.array([3.0, 5, 4, 3, 'hello'], dtype='object')
 print(arr, type(arr[0]), type(arr))
 
+
 # example3: 1-D array with 8 bit
 import numpy as np
 arr = np.array([255, 1000, 3, 256, 54, 5], dtype=numpy.int8)
 print(arr, type(arr[0]), type(arr))
-
 
 
 
