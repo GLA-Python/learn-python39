@@ -31,3 +31,11 @@ a
 a = 2
 x = opera(a)
 print(x)
+
+b=np.array([[1,2,3,4],[5,6,7,8],[10,11,12,13]])
+b[2,1]
+
+# Mark the right output from the below options
+
+# Mark the right output from the below options
+
