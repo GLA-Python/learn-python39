@@ -54,9 +54,109 @@ print(arr)
 
 
 # arange()
+import matplotlib.pyplot as plt
 import numpy as np
-k = np.arange(0, 10, 2.5)
-print(list(k))
+k = np.arange(0, 10, .25)
+value = np.sin(k)
+value2 = np.cos(k)
+
+plt.plot(k, value, linewidth=5)
+plt.plot(k, value2, linewidth=5)
+
+plt.show()
+
+
+
+
+# array sum
+import numpy as np
+lst = [[2, 4, 54], [6, 32, 2]]
+arr = np.array(lst)
+print(arr, end='\n\n')
+s = np.max(arr, axis=0)
+print(s)
+
+
+
+# linspace
+arr = np.linspace(2, 4, 19)
+print(arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+# import cv2
+# import matplotlib.pyplot as plt
+#
+# cam = cv2.VideoCapture()
+#
+# while 1:
+#     flag, img = cam.read()
+#     cv2.imshow('My image', img)
+#
+#     if cv2.waitKey(1) == ord('q'):
+#         break
+# cv2.destroyAllWindows()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# matrix multiplication
+
+mat1 = np.arange(12).reshape(3, 4)
+mat2 = np.arange(12).reshape(4, 3)
+
+res = np.dot(mat1, mat2)
+print(res)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -108,9 +208,86 @@ plt.imshow(mat)
 plt.show()
 
 
+# sum
+import numpy as np
+
+arr = np.arange(12).reshape(3, 4)
+
+re = np.sum(arr, axis=1)
+print(re)
+
+
+# linspace
+
+arr = np.linspace(1, 4, 100)
+print(arr)
+
+
+# Q1. Write a Python program to create an array using numpy of
+#       all the even integers from 1 to 100.
+import numpy as np
+start = 1
+stop = 100
+arr = np.arange(start+1, stop+1, 2)
+print(arr, type(arr))
+
+# Q2. Write a program to test whether none of the elements
+#   of a given numpy array is more than 100.
+
+import numpy as np
+arr = map(eval, input('enter the space separated elements of the array').split())
+# arr = np.array(arr)
+result = True
+# logic here
+for i in arr:
+    if i > 100:
+        result = False
+        break
+
+if result:
+    print('Test pass,none of the elements of a given numpy array is more than 100 ')
+else:
+    print(f'Test failed, more than 100 value found {i}')
 
 
 
+
+
+# Q3 Write a Python program to create an array with the integer values and
+#       determine the size of the memory occupied by the array. Comparison with list also
+import sys
+lst =  [200, 256, 6, 4, 78]
+k = sys.getsizeof(lst)
+print(k, 'bytes list')
+
+import numpy as np
+arr = np.array(lst, dtype=np.int8)
+
+print(arr, arr.size*arr.itemsize, 'bytes array')
+
+
+
+# 4. Write a NumPy program to create a NxN identity matrix.
+#   N is user entered positive Integer.
+import numpy as np
+N = int(input('enter the positive integer '))
+mat = np.eye(N)
+print(mat)
+
+
+# 5. Write a Python program to remove all the numbers in a given array which is
+#   equal and greater to a given number
+
+import numpy as np
+N = int(input('Enter the number '))
+arr = np.array([2, 54, 66, 2, 8, 90])
+print(list(filter(lambda x: x <= N, arr)))
+
+
+
+
+
+# c100
 
 
 

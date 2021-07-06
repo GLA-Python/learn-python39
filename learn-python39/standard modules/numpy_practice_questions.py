@@ -78,5 +78,95 @@ print(np.array(list_array))
 
 
 
+"""
+Q1. Write a Python program to create an array using numpy of all the 
+    even integers from 1 to 100.
+"""
+import numpy as np
+start = 1
+stop = 100
+se = np.arange(start+1, stop+1, 2)
+print(se, type(se))
+
+
+
+"""
+Q2. Write a program to test whether none of the elements 
+    of a given numpy array is more than 100. 
+"""
+
+import numpy as np
+arr = np.array([2, 54, 66, 44, 705])
+# re = True
+# logic here
+# for i in arr:
+#     if i > 100:
+#         re = False
+#         break
+re = True if np.max(arr) < 100 else False
+if re:
+    print('Test pass, none of the elements of a given numpy array is more than 100')
+else:
+    print('Test failed, more than 100 value found ')
+
+
+"""
+Q3. Write a Python program to create an array with the integer values and 
+    determine the size of the memory occupied by the array. Comparison with list also.
+"""
+import numpy as np
+import sys
+k = list(map(int, input('enter the space separated integer values').split()))
+arr = np.array(k)
+print(arr, arr.size*arr.itemsize, 'bytes in array')
+lst = [3, 54, 504, 43, 10]
+print(k, sys.getsizeof(k), 'bytes in list format')
+
+"""
+Q4. Write a NumPy program to create a NxN identity matrix. 
+    N is user entered positive Integer.
+"""
+import numpy as np
+N = int(input('enter the positive integer '))
+mat = np.eye(N)
+print(mat)
+
+
+
+
+
+# temp solution
+import numpy as np
+lst = [[3, 4, 6], [3, 4, 1], [20, 3, 10]]
+# lst = [[3, 5, 2]]
+arr = np.array(lst)
+mx = np.max(arr, axis=1)
+# print(mx)
+
+for c, i in enumerate(lst):
+    i[i.index(mx[c])] = i[-1]
+    i[-1] = mx[c]
+
+print(np.array(lst))
+
+
+
+
+import numpy as np
+lst = list(map(int, input('enter the space separated integer values').split()))
+r, c = map(int, input().split())
+mat = np.array(lst).reshape(r, c)
+print(mat)
+
+
+
+
+
+
+
+
+
+
+
 
 
