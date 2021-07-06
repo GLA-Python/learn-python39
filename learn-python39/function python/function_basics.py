@@ -376,3 +376,15 @@ def any_two(var):  # var = var
 
 var = 33
 any_two(var)
+
+
+
+
+
+
+
+
+
+
+
+
