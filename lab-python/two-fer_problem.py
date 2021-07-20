@@ -1,5 +1,3 @@
-
-
 '''
 . Function Two-fer or 2-fer is short for two for one. One for you and one for me.
 "One for X, one for me."
@@ -10,8 +8,11 @@ def Two-fer():
 return “One for X, one for me."
 '''
 
-def two_fer(x='You'):
+def two_fer(x):
     # logic here 
-    return f'one for {x}, one for Me'
+    return f'one for {x}, one for me'
 
-print(two_fer('Rahul'))
+print(two_fer('Amit'))
+
+
+
