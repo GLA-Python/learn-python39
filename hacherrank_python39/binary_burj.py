@@ -12,14 +12,10 @@ binary burj
 1001
 1010
 '''
-
-num = int(input())
-w = len(bin(num)[2:])
-for i in range(num+1):
-    print(f'{{0:>{w}}}'.format(bin(i)[2:]))
-    # x = bin(i)[2:]
-    # print(' '*(w-len(x))+x)
-
+n=int(input())
+l=len(f"{n:b}")
+for i in range (n+1):
+    print(f"{i:b}".rjust(l))
 
 
 
