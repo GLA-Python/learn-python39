@@ -26,3 +26,4 @@ if not len(alpha_set - st):
     print('Panagram ')
 else:
     print('Not Panagram ')
+    
