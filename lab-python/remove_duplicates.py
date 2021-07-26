@@ -20,3 +20,12 @@ for i in lst:
 ##[out.append(i) for i in lst if i not in out]        
 
 print('Unique elements list ', out)       
+
+
+'''  
+l2=[]
+for i in list(map(eval,input().split())):
+    if i not in l2:
+        l2.append(i)
+print(l2) 
+'''
