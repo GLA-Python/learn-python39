@@ -1,36 +1,25 @@
-
-
-def minimize_drinks(drinks, remaining_drinks, remaining_customers, cust_by_drink):
-    min_option = drinks
-
-    if not remaining_customers:
-        return drinks - remaining_drinks
-
-    for drink in remaining_drinks:
-        option = minimize_drinks(
-            drinks, remaining_drinks - {drink},
-            remaining_customers - cust_by_drink[drink], cust_by_drink)
-        if len(option) < len(min_option):
-            min_option = option
-
-    return min_option
-
-
-def get_min_drinks(preferences: Dict[int, List[int]]):
-    cust_by_drink = dict()
-    for cust in preferences:
-        for drink in preferences[cust]:
-            if drink not in cust_by_drink:
-                cust_by_drink[drink] = set()
-            cust_by_drink[drink].add(cust)
-
-    remaining_drinks = set(cust_by_drink.keys())
-    remaining_customers = set(preferences.keys())
-    min_drinks = minimize_drinks(set(cust_by_drink.keys()), remaining_drinks,
-                                 remaining_customers, cust_by_drink)
-    return min_drinks
-
-dct = ' '
-while st[-1] != '}':
-    dct += input() 
-print(len(get_min_drinks(eval(dct))))
+li=''
+while li[-1]!='}':
+    li+=input()
+d=eval(li)
+s=set()
+l=list(d.values())
+for i in d:
+    for j in d[i]:
+        s.add(j)
+l2=sorted(list(s))
+c=0
+while len(l)!=0:
+    l3=[]
+    for i in l:
+        for j in i:
+            l3.append(j)
+    d2={i:l3.count(i) for i in l2}
+    m=max(d2,key=d2.get)
+    l4=[]
+    for i in l:
+        if m not in i:
+            l4.append(i)
+    l=l4
+    c+=1
+print(c)
